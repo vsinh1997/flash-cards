@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Flashcards</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="flashcard-container">
+        <h4>Flash Card</h4>
+        <div class="flashcard" id="flashcard">
+            <div class="front">
+                <img src="image/image.png" />
+                <p id="kanji">漢字</p>
+                <p><small>Copyright © by Rikkei Academy</small></p>
+            </div>
+            <div class="back">
+                <img src="image/image.png" />
+                <p id="meaning">意味</p>
+                <p><small>Copyright © by Rikkei Academy</small></p>
+            </div>
+        </div>
+    </main>
+    <div>
+        <button onclick="prevCard()">前へ</button>
+        <button onclick="flipCard()">答えを見る</button>
+        <button onclick="nextCard()">次へ</button>
+    </div>
+
+    <script src="js/flashcards.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
