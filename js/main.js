@@ -1,3 +1,12 @@
+
+function reset() {
+    document.getElementById("loader-container").style.display = 'grid'
+    setTimeout(() => {
+        window.location.reload();
+    }, 500);
+
+}
+
 let usedIndexes = [];
 
 function getRandomIndex() {
@@ -9,9 +18,10 @@ function getRandomIndex() {
 }
 
 function updateFlashcard() {
-    const flashcard = flashcards[currentCardIndex];
+    const flashcard = flashcard[currentCardIndex];
     document.getElementById('kanji').textContent = flashcard.kanji;
     document.getElementById('meaning').textContent = flashcard.meaning;
+    document.getElementById('furigana').textContent = flashcard.furigana;
 }
 
 function flipCard() {
@@ -57,6 +67,15 @@ document.addEventListener("keydown", function (event) {
 
 let currentCardIndex = getRandomIndex();
 usedIndexes.push(currentCardIndex);
+
+
+// setTimeout(document.getElementById("loader-container").display = "grid", 5000)
+// document.getElementById("loader-container").style.display = "grid !important"
+
+
+// window.location.reload();
+
+
 
 // Khởi tạo flashcard đầu tiên
 updateFlashcard();
